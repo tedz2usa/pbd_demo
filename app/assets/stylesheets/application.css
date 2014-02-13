@@ -8,6 +8,30 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require reset.css
  *= require_self
  *= require_tree .
  */
+
+body {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	min-width: 400px;
+}
+
+
+.headerBar {
+	border:1px solid black;
+	height:50px;
+	background-color: #eee;
+}
+
+.headerBarTitle {
+	font-size: 30px;
+	text-decoration: none;
+	color: #f33;
+	font-style: italic;
+	font-weight: bold;
+	position: relative;
+	top:10px;
+	left:10px;
+}
