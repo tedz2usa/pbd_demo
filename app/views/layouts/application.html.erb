@@ -9,6 +9,9 @@
 <body>
 	<div class='headerBar'>
 		<%= link_to "Reddit Content Viewer", {:controller => "main", :action => "index"}, {:class => "headerBarTitle"} %>
+		<div class='headerUserLogin'>
+			<a href=''>Login</a>
+		</div>
 	</div>
 	<%= yield %>
 

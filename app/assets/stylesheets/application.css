@@ -15,12 +15,20 @@
 
 body {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-	min-width: 400px;
+	min-width: 875px;
 }
 
+ul {
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+strong {
+	font-weight: bold;
+}
 
 .headerBar {
-	border:1px solid black;
+	border-bottom:1px solid #777;
 	height:50px;
 	background-color: #eee;
 }
@@ -28,10 +36,51 @@ body {
 .headerBarTitle {
 	font-size: 30px;
 	text-decoration: none;
-	color: #f33;
+	color: #fa2222;
 	font-style: italic;
 	font-weight: bold;
 	position: relative;
 	top:10px;
 	left:10px;
 }
+
+.headerUserLogin a {
+	font-size:12px;
+	position:absolute;
+	right:20px;
+	top:22px;
+	color:#55b;
+	text-decoration: none;
+}
+
+.headerUserLogin a:visited {
+	color:#55b;
+}
+.headerUserLogin a:hover {
+	text-decoration: underline;
+}
+
+.welcome {
+	width:800px;
+	min-height: 200px;
+	border:1px solid #bbb;
+	margin: 0px auto;
+	margin-top:20px;
+	padding:15px;
+	line-height: 25px;
+}
+
+.welcome h1 {
+	font-size: 28px;
+	padding-bottom: 10px;
+}
+
+.border10 {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+
+
+
