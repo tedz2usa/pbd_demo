@@ -27,6 +27,10 @@ strong {
 	font-weight: bold;
 }
 
+.codeFont {
+	font-family: "Courier New", Courier, monospace;
+}
+
 .headerBar {
 	border-bottom:1px solid #777;
 	height:50px;
@@ -68,11 +72,29 @@ strong {
 	margin-top:20px;
 	padding:15px;
 	line-height: 25px;
+	font-size: 16px;
 }
 
 .welcome h1 {
 	font-size: 28px;
 	padding-bottom: 10px;
+}
+
+.welcome ul.demoCreds {
+	font-size: 14px;
+	margin:20px;
+	margin-left: 30px;
+}
+
+.welcome ul.demoCreds .label {
+	color:#555;
+	font-style: italic;
+}
+
+.welcome ul.demoCreds .info {
+	letter-spacing: 0.3px;
+	margin-left: 10px;
+	
 }
 
 .border10 {
