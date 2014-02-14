@@ -35,6 +35,10 @@ end
 # Use Active Resource.
 gem 'activeresource', :require => 'active_resource'
 
+# For Heroku production.
+group :production do
+  gem 'rails_12factor'
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
