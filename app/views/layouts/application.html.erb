@@ -11,16 +11,17 @@
 		<%= link_to "Reddit Content Viewer", {:controller => "main", :action => "index"}, {:class => "headerBarTitle"} %>
 		<div class='headerUserLogin'>
 			<% if session[:user_id] %>
-        <a href=''><%= session[:username] %></a>
-        <%= link_to 'Logout', :action => 'logout', :controller => 'account' %>
+        <%= link_to session[:username], {:action => 'settings', :controller => 'account'}, {:class => 'userLoginUsername'} %>&nbsp;&nbsp;
+        <%= link_to 'Logout', {:action => 'logout', :controller => 'account'} %>
       <% else %>
-        <%= link_to 'Login', :action => 'login', :controller => 'account' %>
+        <%= link_to 'Register', {:action => 'register', :controller => 'account'} %>&nbsp;&nbsp;
+        <%= link_to 'Login', {:action => 'login', :controller => 'account'} %>
       <% end %>
 		</div>
 	</div>
   <% if flash[:noticeMessage] %>
     <div class='flashNotice border5<%= @noticeToneClass %>'>
-      <%= flash[:noticeMessage] %> Testing value
+      <%= flash[:noticeMessage] %>
     </div>
   <% end %>
 	<%= yield %>

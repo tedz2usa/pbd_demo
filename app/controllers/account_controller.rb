@@ -13,7 +13,7 @@ class AccountController < ApplicationController
       end
     end
     if authenticated_user
-      # TODO: mark user as logged in
+      # Mark user as logged in
       session[:user_id] = authenticated_user.id
       session[:username] = authenticated_user.username
       flash[:noticeMessage] = "You are now logged in."
@@ -27,11 +27,15 @@ class AccountController < ApplicationController
   end
 
   def logout
-    # TODO: mark user as logged out
+    # Mark user as logged out
     session[:user_id] = nil
     session[:username] = nil
-    flash[:notice] = "Logged out"
-    redirect_to(:action => "login")
+    flash[:noticeMessage] = "You have been logged out"
+    flash[:noticeTone] = 'positive'
+    redirect_to(:action => "index", :controller => "main")
+  end
+
+  def settings
   end
 
 end

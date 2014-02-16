@@ -68,6 +68,10 @@ strong {
 	text-decoration: underline;
 }
 
+.headerUserLogin .userLoginUsername {
+	font-size: 14px;
+}
+
 .flashNotice {
 	width:500px;
 	border:1px solid green;
@@ -80,13 +84,19 @@ strong {
 	background-color: #dfd;
 }
 
-.welcome {
-	width:800px;
-	min-height: 200px;
+.mainContentBox {
 	border:1px solid #bbb;
 	margin: 0px auto;
 	margin-top:20px;
 	padding:15px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.welcome {
+	width:800px;
+	min-height: 200px;
 	line-height: 25px;
 	font-size: 16px;
 }
@@ -114,11 +124,12 @@ strong {
 }
 
 .loginBox {
-	border: 1px solid #bbb;
-	margin:0px auto;
 	width:300px;
-	padding:15px;
-	margin-top:20px;
+	line-height: 25px;
+}
+
+.loginBox h1 {
+	margin-bottom: 15px;
 }
 
 .loginBox label {
