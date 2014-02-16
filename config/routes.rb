@@ -2,8 +2,7 @@ PbdDemo::Application.routes.draw do
   
   
   root "main#index"
-  match ':controller/(/:action(/:id))', :via => :get
-  match ':controller/(/:action(/:id))', :via => :post
+  match ':controller/(/:action(/:id))', :via => [:get, :post]
   
 
  #get "main/index"

@@ -38,4 +38,8 @@ class AccountController < ApplicationController
   def settings
   end
 
+  def register
+    @user = User.new
+  end
+
 end

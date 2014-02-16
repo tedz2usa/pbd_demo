@@ -94,6 +94,11 @@ strong {
 	border-radius: 10px;
 }
 
+.mainContentBox h1 {
+	font-size: 28px;
+	padding-bottom: 10px;
+}
+
 .welcome {
 	width:800px;
 	min-height: 200px;
@@ -129,14 +134,24 @@ strong {
 }
 
 .loginBox h1 {
-	margin-bottom: 15px;
+	font-size: 18px;
 }
 
 .loginBox label {
 	font-size: 14px;
 }
 
+.registerAccountBox {
+	width:400px;
+}
 
+.registerAccountBox h1 {
+	font-size: 18px;
+}
+
+.registerAccountBox td {
+	font-size: 14px;
+}
 
 .border10 {
 	-webkit-border-radius: 10px;
