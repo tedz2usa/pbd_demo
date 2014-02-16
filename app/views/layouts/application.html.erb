@@ -13,6 +13,11 @@
 			<a href=''>Login</a>
 		</div>
 	</div>
+  <% if flash[:noticeMessage] %>
+    <div class='flashNotice border5<%= @noticeToneClass %>'>
+      <%= flash[:noticeMessage] %> Testing value
+    </div>
+  <% end %>
 	<%= yield %>
 
 </body>

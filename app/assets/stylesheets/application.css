@@ -64,6 +64,18 @@ strong {
 	text-decoration: underline;
 }
 
+.flashNotice {
+	width:500px;
+	border:1px solid green;
+	margin: 5px auto;
+	padding: 5px;
+}
+
+.fnPositive {
+	border-color: green;
+	background-color: #dfd;
+}
+
 .welcome {
 	width:800px;
 	min-height: 200px;
@@ -103,6 +115,10 @@ strong {
 	border-radius: 10px;
 }
 
-
+.border5 {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
 
 
