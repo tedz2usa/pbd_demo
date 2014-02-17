@@ -1,4 +1,5 @@
 class AccountController < ApplicationController
+  
   def index
   end
 
@@ -22,6 +23,7 @@ class AccountController < ApplicationController
     else
       flash[:noticeMessage] = "Invalid username/password combination."
       flash[:noticeTone] = "negative"
+      session[:username] = params[:username]
       redirect_to(:action => 'login')
     end
   end

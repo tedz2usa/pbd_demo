@@ -1,5 +1,6 @@
 <div class='mainContentBox registerAccountBox'>
   <h1>Register for a New Account</h1>
+  <%= error_messages_for(@user) %>
   <%= form_for(:user, :url => {:action => 'create', :controller => 'user'}) do |f| %>
     <table>
       <tr>

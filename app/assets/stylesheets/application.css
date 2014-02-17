@@ -78,6 +78,9 @@ strong {
 	margin: 0px auto;
 	margin-top: 20px;
 	padding: 5px;
+	font-size:14px;
+	padding-left:10px;
+	position: relative;
 }
 
 .fnPositive {
@@ -88,6 +91,27 @@ strong {
 .fnNegative {
 	border-color: red;
 	background-color: #fdd;
+}
+
+.fnClose {
+	cursor: pointer;
+	font-size: 8px;
+	width:10px;
+	height: 10px;
+	position: absolute;
+	right:2px;
+	top:2px;
+	border:1px solid #888;
+	padding: 0px;
+	text-align: center;
+	line-height: 10px;
+	background-color: #fff;
+	color:#222;
+}
+
+.fnClose:hover {
+	background-color: #ddd;
+	color:#222;
 }
 
 .mainContentBox {
@@ -132,6 +156,20 @@ strong {
 	letter-spacing: 0.3px;
 	margin-left: 10px;
 	
+}
+
+.formErrorsExplanation {
+	font-size: 12px;
+	margin-bottom:15px;
+}
+
+.formErrorsExplanation h2{
+	font-size: 13px;
+	color:#c33;
+}
+
+.field_with_errors {
+	background-color: #e88;
 }
 
 .loginBox {
