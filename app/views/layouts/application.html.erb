@@ -22,7 +22,7 @@
   <% if flash[:noticeMessage] %>
     <div class='flashNotice border5<%= @noticeToneClass %>' id='flashNotice'>
       <%= flash[:noticeMessage] %>
-      <div class='fnClose border10'>×</div>
+      <div class='fnClose border10' id='flashNoticeClose'>×</div>
     </div>
   <% end %>
 	<%= yield %>

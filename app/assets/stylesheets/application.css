@@ -99,8 +99,8 @@ strong {
 	width:10px;
 	height: 10px;
 	position: absolute;
-	right:2px;
-	top:2px;
+	right:5px;
+	top:5px;
 	border:1px solid #888;
 	padding: 0px;
 	text-align: center;
@@ -111,7 +111,7 @@ strong {
 
 .fnClose:hover {
 	background-color: #ddd;
-	color:#222;
+	color:#222	;
 }
 
 .mainContentBox {

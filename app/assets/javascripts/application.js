@@ -16,7 +16,11 @@
 //= require_tree .
 
 $( document ).ready(function() {
-  
+  $('#flashNoticeClose').click(function() {
+        $('#flashNoticeClose').parent().remove();
+      }
+    );
+
 });
 
 function dismissFlashNotification() {
