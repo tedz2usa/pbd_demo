@@ -45,7 +45,7 @@ strong {
 	font-weight: bold;
 	position: relative;
 	top:10px;
-	left:10px;
+	left:15px;
 }
 
 .headerUserLogin {
@@ -74,14 +74,20 @@ strong {
 
 .flashNotice {
 	width:500px;
-	border:1px solid green;
-	margin: 5px auto;
+	border:1px solid black;
+	margin: 0px auto;
+	margin-top: 20px;
 	padding: 5px;
 }
 
 .fnPositive {
 	border-color: green;
 	background-color: #dfd;
+}
+
+.fnNegative {
+	border-color: red;
+	background-color: #fdd;
 }
 
 .mainContentBox {

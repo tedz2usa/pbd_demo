@@ -18,7 +18,7 @@ class AccountController < ApplicationController
       session[:username] = authenticated_user.username
       flash[:noticeMessage] = "You are now logged in."
       flash[:noticeTone] = "positive"
-      redirect_to(:action => 'index')
+      redirect_to(:action => 'index', :controller => 'main')
     else
       flash[:noticeMessage] = "Invalid username/password combination."
       flash[:noticeTone] = "negative"
@@ -36,6 +36,7 @@ class AccountController < ApplicationController
   end
 
   def settings
+    @user = User.find(session[:user_id])
   end
 
   def register

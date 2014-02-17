@@ -1,19 +1,37 @@
-<div class='mainContentBox accountSettingsBox'>
+<div class='mainContentBox registerAccountBox accountSettingsBox'>
   <h1>Account Settings</h1>
-  <%= form_tag(:action => 'attempt_login') do %>
+  
+  <%= form_for(:user, :url => {:action => 'update', :id => @user.id, :controller => 'user'}) do |f| %>
     <table>
       <tr>
-        <td><%= label_tag(:username) %></td>
-        <td><%= text_field_tag(:username) %></td>
+        <td>First Name</td>
+        <td><%= f.text_field(:first_name) %></td>
       </tr>
       <tr>
-        <td><%= label_tag(:password) %></td>
-        <td><%= password_field_tag(:password) %></td>
+        <td>Last Name</td>
+        <td><%= f.text_field(:last_name) %></td>
+      </tr>
+      <tr>
+        <td>Email Address</td>
+        <td><%= f.text_field(:email) %></td>
+      </tr>
+      <tr>
+        <td>Username</td>
+        <td><%= f.text_field(:username) %></td>
+      </tr>
+      <tr>
+        <td>Password</td>
+        <td><%= f.password_field(:password) %></td>
+      </tr>
+      <tr>
+        <td>Password Confirmation</td>
+        <td><%= f.password_field(:password_confirmation) %></td>
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><%= submit_tag("Log In") %></td>
+        <td><%= submit_tag('Update Settings') %></td>
       </tr>
     </table>
   <% end %>
+
 </div>
