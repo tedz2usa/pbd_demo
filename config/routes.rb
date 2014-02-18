@@ -2,7 +2,9 @@ PbdDemo::Application.routes.draw do
   
   
   root "main#index"
+  match 'account/change-password' => 'account#change_password', :as => 'change_password', :via => [:get, :post]
   match ':controller/(/:action(/:id))', :via => [:get, :post]
+  
   
 
  #get "main/index"

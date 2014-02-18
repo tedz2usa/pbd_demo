@@ -20,18 +20,12 @@
         <td><%= f.text_field(:username) %></td>
       </tr>
       <tr>
-        <td>Password</td>
-        <td><%= f.password_field(:password) %></td>
-      </tr>
-      <tr>
-        <td>Password Confirmation</td>
-        <td><%= f.password_field(:password_confirmation) %></td>
-      </tr>
-      <tr>
         <td>&nbsp;</td>
         <td><%= submit_tag('Update Settings') %></td>
       </tr>
     </table>
+    <br>
+    <p class='littleNote'>Click <%= link_to 'here', {:action => 'change_password'} %> to change your password. </p>
   <% end %>
 
-</div>
+</div>  

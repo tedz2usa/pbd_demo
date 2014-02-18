@@ -1,3 +1,7 @@
+TODO:
+Move Password change outside of account settings/
+Add a menu to logged in user's layout. (conditional add). Application Layout.
+
 
 Ruby on Rails ---------------------------------------------------------------------------
 Utilizing routes file to control pointer for webiste root.
@@ -26,6 +30,8 @@ Using layouts to store shared site-wide elements,
 Using custom helper methods to assist with Views rendering.
 	Refactored out for application-wide usage.
 	For example, to abstract the call to displaying form errors of an object.
+Using custom route to allow action name to be displayed in url with an aesthetic hyphen rather than an underscore.
+	For example, '/account/change-password' instead of '/account/change_password'
 
 
 HTML, Forms -----------------------------------------------------------------------------

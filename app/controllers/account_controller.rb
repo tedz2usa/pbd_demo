@@ -41,6 +41,10 @@ class AccountController < ApplicationController
     @user = User.find(session[:user_id])
   end
 
+  def change_password
+    @user = User.find(session[:user_id])
+  end
+
   def register
     @user = User.new
   end

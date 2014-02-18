@@ -129,6 +129,10 @@ strong {
 	padding-bottom: 10px;
 }
 
+.littleNote {
+	font-size:10px;
+}
+
 .welcome {
 	width:800px;
 	min-height: 200px;
