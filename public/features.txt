@@ -49,7 +49,6 @@ Handling form error and outputting them to user.
 	The offending input field is also colored red.
 
 
-
 Security --------------------------------------------------------------------------------
 Implementing secure user authentication 
 	Using "has_secure_password" to store hashed password digests using bcrpt-ruby gem.
@@ -64,6 +63,7 @@ Preventing Cross-Site Request Forgery
 Preventing SQL injection
 	By always submitting database queries in a way such that Ruby on Rails handles user inputted data before insertion into an SQL query.
 
+
 HTML, CSS -------------------------------------------------------------------------------
 Using the CSS box model styling attributes to add borders, colors, and spacing for aesthetic layout.
 Using the CSS positioning model for custom arrangemnts of items for interface layout.
@@ -76,3 +76,5 @@ Giving html elements multiple CSS classes to take advantage of refactored CSS st
 Using CSS Reset (http://meyerweb.com/eric/tools/css/reset/)
 	To reset all attribute values to zero or equivalent default, 
 	So that consistent layout style is displayed to all users across all browsers.
+
+Consumption of RESTful API --------------------------------------------------------------

@@ -32,13 +32,24 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-# Use Active Resource.
-gem 'activeresource', :require => 'active_resource'
 
 # For Heroku production.
 group :production do
   gem 'rails_12factor'
 end
+
+# Use Active Resource.
+#gem 'activeresource', :require => 'active_resource'
+
+# For consuming RESTful api
+#gem "httparty", "~> 0.13.0"
+
+# Now trying Nokogiri
+#gem "nokogiri", "~> 1.6.1"
+
+# Now trying rest-client
+gem "rest-client", "~> 1.6.7"
+
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.1.2'

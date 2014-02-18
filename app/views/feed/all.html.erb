@@ -1,4 +1,7 @@
 <% @page_menu = Menu.find_by_identifier_string('default') %>
 <div class='mainContentBox feedWrapper'>
   <h1>From all feeds</h1>
+  <% @listingItems.each do |item| %>
+    <%= display_listing_item(item) %>
+  <% end %>
 </div>

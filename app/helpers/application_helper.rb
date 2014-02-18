@@ -10,4 +10,21 @@ module ApplicationHelper
       :locals => {:menu => menu})
   end
 
+  def display_listing_items(listingItems)
+    listingItems.each do |item|
+      # render(:partial => 'application/output_feed_listing_item',
+      #   :locals => {:item => listingItems.first})
+    end
+    # listingItems.each do |item|
+    #   render(:partial => 'application/output_feed_listing_item',
+    #     :locals => {:item => item})
+    # end
+    return 'hello'
+  end
+
+  def display_listing_item(listingItem)
+    render(:partial => 'application/output_feed_listing_item',
+        :locals => {:item => listingItem})
+  end
+
 end
