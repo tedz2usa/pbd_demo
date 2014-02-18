@@ -1,5 +1,7 @@
 TODO:
-Add a menu to logged in user's layout. (conditional add). Application Layout.
+Add emailing features.
+Add pagination.
+Add user account administration. 
 
 
 Ruby on Rails ---------------------------------------------------------------------------
