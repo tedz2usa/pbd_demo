@@ -1,5 +1,4 @@
 TODO:
-Move Password change outside of account settings/
 Add a menu to logged in user's layout. (conditional add). Application Layout.
 
 
@@ -18,6 +17,8 @@ Using database migration files to update application database schema.
 	Adding/removing columns, 
 	Adding/removing indices, 
 	Modifying column data type.
+Using database migrations to populate default setup data
+	Such as a default demo user account, and main menu items.
 Using basic forms for basic actions such as user login.
 Using Rails sessions to store persistent session data 
 	Such as the currently logged in user.
@@ -46,6 +47,7 @@ Handling form error and outputting them to user.
 	With a list of validation errors in the user's inputted data outputed,
 	With the form prepopulated with the user's original data so that the user does not have to type them all again.
 	The offending input field is also colored red.
+
 
 
 Security --------------------------------------------------------------------------------
