@@ -56,7 +56,7 @@ function preparePage() {
   // Make Feed visible, and make it's height be that calculated.
   $('.feedWrapper').css({
     'visibility': 'visible',
-    'height': smallestHeights[indexOfLargestValue(smallestHeights)]
+    'height': (smallestHeights[indexOfLargestValue(smallestHeights)] + 100  ) + 'px'
   });
 
   

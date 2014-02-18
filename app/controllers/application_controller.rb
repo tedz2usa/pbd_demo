@@ -26,7 +26,7 @@ class ApplicationController < ActionController::Base
 
     def determineHeaderTitleLinkTarget
       if session[:user_id]
-        @headerTitleLinkTarget = {:action => 'all', :controller => 'feed'}
+        @headerTitleLinkTarget = {:action => 'default', :controller => 'feed'}
       else
         @headerTitleLinkTarget = {:action => 'index', :controller => 'main'}
       end

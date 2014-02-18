@@ -115,7 +115,7 @@ div.listingItem:hover {
 
 .listingNumCommentsValue {
 	position: relative;
-	top:-5px;
+	top:-10px;
 
 }
 
@@ -124,6 +124,6 @@ div.listingItem:hover {
 	color:#555;
 	line-height: 5px;
 	position: absolute;
-	top: 40px;
+	top: 35px;
 	width: 144px;
 }

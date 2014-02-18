@@ -135,16 +135,16 @@ a.headerBarTitle:hover {
 
 .pageMenu {
 	width:150px;
-	border-right:1px solid #555;
 	min-height: 100px;
 	float: left;
 	margin-top: 30px;
 	font-size:13px;
-	line-height: 16px;
+	line-height: 20px;
 }
 
 .pageMenu ul {
 	padding-left: 10px;
+	border-right:1px solid #555;
 }
 
 
@@ -238,7 +238,7 @@ a.headerBarTitle:hover {
 
 
 .feedContainer {
-	margin-left: 150px;
+	margin-left: 175px;
 	border:0;
 	width:850px;
 	

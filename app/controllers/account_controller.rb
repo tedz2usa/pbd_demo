@@ -19,7 +19,7 @@ class AccountController < ApplicationController
       session[:username] = authenticated_user.username
       flash[:noticeMessage] = "You are now logged in."
       flash[:noticeTone] = "positive"
-      redirect_to(:action => 'all', :controller => 'feed')
+      redirect_to(:action => 'default', :controller => 'feed')
     else
       flash[:noticeMessage] = "Invalid username/password combination."
       flash[:noticeTone] = "negative"
