@@ -4,8 +4,9 @@
 
 // $( document ).ready(function() {
 
+
 $( document ).ready(function() {
-  
+
   $('.feedWrapper').css({
     "visibility": 'hidden'
   });
@@ -13,8 +14,10 @@ $( document ).ready(function() {
 });
 
 
-$(window).bind("load", function() {
-  
+$(window).bind("load", preparePage);
+
+function preparePage() {
+
   // Box filling algorithm.
   var verticalSpacing;
   var horizontalSpacing = verticalSpacing = 15;
@@ -56,12 +59,8 @@ $(window).bind("load", function() {
     'height': smallestHeights[indexOfLargestValue(smallestHeights)]
   });
 
-
-
-
-
-
-});
+  
+}
 
 function indexOfSmallestValue(arr) {
   var smallestValue = arr[0];

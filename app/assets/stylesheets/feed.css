@@ -1,7 +1,7 @@
 /* Feed Styles */
 
 .listingItem {
-	border:1px solid #999;
+	border:1px solid #939393;
 	padding:15px;	
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -52,7 +52,7 @@ div.listingItem:hover {
 .listingBottom {
 	position:absolute;
 	bottom:0px;
-	background-color: #ddd;
+	background-color: #e9e9e9;
 	height:60px;
 	width: 100%;
 	left:0px;
@@ -62,6 +62,11 @@ div.listingItem:hover {
 	-moz-border-radius-bottomleft: 5px;
 	border-bottom-right-radius: 5px;
 	border-bottom-left-radius: 5px;
+	border-top:1px solid #ccc;
+}
+
+.listingBottom a {
+	color:449;
 }
 
 .listingScore {
@@ -72,14 +77,21 @@ div.listingItem:hover {
 	display: inline-block;
 	position: relative;
 	width: 135px;
-	border-right: 1px solid #aaa;
+	border-right: 1px solid #ccc;
+	float: left;
 }
+
+.listingScore:hover {
+	background-color: #ccc;
+	cursor:pointer;
+}
+
 .listingScoreArrow {
 	background-image:url('/arrow.png');
 	background-repeat:no-repeat;
 	background-position: center;
 	background-size:20px 40px;
-	width:135px;
+	width:143px;
 	height:60px;
 	position: absolute;
 	top:0;
@@ -90,13 +102,20 @@ div.listingItem:hover {
 	line-height: 60px;
 	font-size: 15px;
 	font-family: "Arial Black", Gadget, Arial, sans-serif;
-	width:135px;
+	width:144px;
 	height:60px;
 	display: inline-block;
+	position: relative;
+}
+
+.listingNumComments:hover {
+	background-color: #ccc;
+	cursor:pointer;
 }
 
 .listingNumCommentsValue {
-	line-height: 10px;
+	position: relative;
+	top:-5px;
 
 }
 
@@ -104,6 +123,7 @@ div.listingItem:hover {
 	font-size:12px;
 	color:#555;
 	line-height: 5px;
-	position: relative;
-	top: 5px;
+	position: absolute;
+	top: 40px;
+	width: 144px;
 }

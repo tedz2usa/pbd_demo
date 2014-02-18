@@ -1,6 +1,6 @@
 class ListingItem
 
-  attr_accessor :title, :subreddit, :link, :created, :thumbnail, :author, :nsfw, :score, :numComments
+  attr_accessor :title, :subreddit, :link, :created, :thumbnail, :author, :nsfw, :score, :numComments, :permaLink
 
  
 
@@ -18,6 +18,7 @@ class ListingItem
     @nsfw = data['over_18']
     @score = data['score']
     @numComments = data['num_comments']
+    @permaLink = data['permalink']
 
   end
 end

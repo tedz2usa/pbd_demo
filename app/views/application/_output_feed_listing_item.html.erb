@@ -8,13 +8,13 @@
     <p class='submissionLine'><%= DateTime.strptime(item.created.to_s,'%s').strftime('%b %d, %Y %I:%M%P') %> by <%= link_to item.author, 'http://www.reddit.com/user/' + item.author %></p>
     <div class='clearBoth'></div>
     <div class='listingBottom'>
-      <div class='listingScore'>
+      <a class='listingScore' href="http://www.reddit.com<%= item.permaLink %>">
         <%= item.score %>
         <div class='listingScoreArrow'></div>
-      </div>
-      <div class='listingNumComments'>
+      </a>
+      <a class='listingNumComments' href="http://www.reddit.com<%= item.permaLink %>">
         <div class='listingNumCommentsValue'><%= item.numComments %></div>
         <div class='listingNumCommentsUnit'>comments</div>
-      </div>
+      </a>
     </div>
   </div>
