@@ -18,15 +18,15 @@ Ruby on Rails
 * Utilizing routes file to control pointer for webiste root.
 * Utilizing a database connection for persistent application information storage.
 * Using Models 
-	* To represent objects from databases, 
-	* Object-relational mapping.
+	- To represent objects from databases, 
+	- Object-relational mapping.
 * Using Controllers 
-    - To manipulate database information using Models in an object oriented manner, and
-     - To prepare and stage necessary information for Views to render controller action results.
+	- To manipulate database information using Models in an object oriented manner, and
+	- To prepare and stage necessary information for Views to render controller action results.
 * Using Views
-    * To recieve prepared display data, and output the data appropriately on the page. 
+	- To recieve prepared display data, and output the data appropriately on the page. 
 * Using database migration files to update application database schema.
-     * Adding/removing columns, 
+	- Adding/removing columns, 
 	- Adding/removing indices, 
 	- Modifying column data type.
 * Using database migrations to populate default setup data
