@@ -1,5 +1,12 @@
 <% if menu %>
   <div class='pageMenu'>
-    <p><%= menu.identifier_string %></p>
+    <% menuItems = menu.menu_items %>
+    <ul>
+      <% menuItems.each do |item| %>
+        <li>
+          <%= link_to item.display_name, {:action => item.link_action, :controller => item.link_controller} %>
+        </li>
+      <% end %>
+    </ul>
   </div>
 <% end %>
