@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div class='headerBar'>
-		<%= link_to "Reddit Content Viewer", {:controller => "main", :action => "index"}, {:class => "headerBarTitle"} %>
+		<%= link_to "Reddit Content Viewer", @headerTitleLinkTarget, {:class => "headerBarTitle"} %>
 		<div class='headerUserLogin'>
 			<% if session[:user_id] %>
         <%= link_to session[:username], {:action => 'settings', :controller => 'account'}, {:class => 'userLoginUsername'} %>&nbsp;&nbsp;
@@ -25,7 +25,11 @@
       <div class='fnClose border10' id='flashNoticeClose'>×</div>
     </div>
   <% end %>
-	<%= yield %>
+  <%= display_page_menu(@page_menu) if session[:user_id] && @page_menu %>
+  <div class='allWrapper'>
+    
+  	<%= yield %>
+  </div>
 
 </body>
 </html>

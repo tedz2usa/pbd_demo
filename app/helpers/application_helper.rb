@@ -5,4 +5,9 @@ module ApplicationHelper
       :locals => {:object => object})
   end
 
+  def display_page_menu(menu)
+    render(:partial => 'application/page_menu',
+      :locals => {:menu => menu})
+  end
+
 end

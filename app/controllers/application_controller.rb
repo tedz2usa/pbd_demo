@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_action :translateFlashNoticeToneToClass
-  
+  before_action :determineHeaderTitleLinkTarget
 
   private
 
@@ -22,7 +22,14 @@ class ApplicationController < ActionController::Base
         @noticeToneClass = ' ' + @noticeToneClass
       end
 
+    end
 
+    def determineHeaderTitleLinkTarget
+      if session[:user_id]
+        @headerTitleLinkTarget = {:action => 'all', :controller => 'feed'}
+      else
+        @headerTitleLinkTarget = {:action => 'index', :controller => 'main'}
+      end
     end
 
 end

@@ -114,6 +114,17 @@ strong {
 	color:#222	;
 }
 
+.allWrapper {
+}
+
+.pageMenu {
+	width:100px;
+	border-right:1px solid #555;
+	min-height: 100px;
+	float: left;
+}
+
+
 .mainContentBox {
 	border:1px solid #bbb;
 	margin: 0px auto;
@@ -122,6 +133,7 @@ strong {
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
+	
 }
 
 .mainContentBox h1 {
@@ -134,7 +146,7 @@ strong {
 }
 
 .welcome {
-	width:800px;
+	width:700px;
 	min-height: 200px;
 	line-height: 25px;
 	font-size: 16px;

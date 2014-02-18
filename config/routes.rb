@@ -1,7 +1,8 @@
 PbdDemo::Application.routes.draw do
   
-  
-  root "main#index"
+  root :to => redirect('welcome')
+  #root "main#index"
+  match 'welcome' => 'main#index', :as => 'index', :via => :get
   match 'account/change-password' => 'account#change_password', :as => 'change_password', :via => [:get, :post]
   match ':controller/(/:action(/:id))', :via => [:get, :post]
   
