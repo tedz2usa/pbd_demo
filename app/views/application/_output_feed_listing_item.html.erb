@@ -5,6 +5,16 @@
       <a href='<%= item.link %>'><div class='listingItemThumb'><img src="<%= item.thumbnail %>"></div></a>
     <% end %>
     <h1 class='<%= 'longTitle' if item.title.length > 100 %>'><a href='<%= item.link %>'><%= item.title %></a></h1>
-    <p class='littleNote'>Submitted <%= DateTime.strptime(item.created.to_s,'%s').strftime('%m/%d/%Y %I:%M%p') %> by <%= item.author %></p>
+    <p class='submissionLine'><%= DateTime.strptime(item.created.to_s,'%s').strftime('%b %d, %Y %I:%M%P') %> by <%= link_to item.author, 'http://www.reddit.com/user/' + item.author %></p>
     <div class='clearBoth'></div>
+    <div class='listingBottom'>
+      <div class='listingScore'>
+        <%= item.score %>
+        <div class='listingScoreArrow'></div>
+      </div>
+      <div class='listingNumComments'>
+        <div class='listingNumCommentsValue'><%= item.numComments %></div>
+        <div class='listingNumCommentsUnit'>comments</div>
+      </div>
+    </div>
   </div>

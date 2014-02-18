@@ -16,8 +16,8 @@ $( document ).ready(function() {
 $(window).bind("load", function() {
   
   // Box filling algorithm.
-  var verticalSpacing = 10;
-  var horizontalSpacing = 10;
+  var verticalSpacing;
+  var horizontalSpacing = verticalSpacing = 15;
   var columns = 3;
   var smallestHeights = new Array()
   for (var i=0; i<columns; i++) {
@@ -50,9 +50,10 @@ $(window).bind("load", function() {
 
   });
 
-
+  // Make Feed visible, and make it's height be that calculated.
   $('.feedWrapper').css({
-    "visibility": 'visible'
+    'visibility': 'visible',
+    'height': smallestHeights[indexOfLargestValue(smallestHeights)]
   });
 
 
@@ -72,4 +73,16 @@ function indexOfSmallestValue(arr) {
     }
   }
   return smallestIndex;
+}
+
+function indexOfLargestValue(arr) {
+  var largestValue = arr[0];
+  var largestIndex = 0;
+  for (var i=1, n=arr.length; i<n; i++) {
+    if (arr[i] > indexOfLargestValue) {
+      largestValue = arr[i];
+      largestIndex = i;
+    }
+  }
+  return largestIndex;
 }

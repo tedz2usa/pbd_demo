@@ -1,6 +1,6 @@
 class ListingItem
 
-  attr_accessor :title, :subreddit, :link, :created, :thumbnail, :author, :nsfw
+  attr_accessor :title, :subreddit, :link, :created, :thumbnail, :author, :nsfw, :score, :numComments
 
  
 
@@ -16,11 +16,12 @@ class ListingItem
     @thumbnail = data['thumbnail']
     @author = data['author']
     @nsfw = data['over_18']
+    @score = data['score']
+    @numComments = data['num_comments']
 
   end
-
-
 end
+
 
   
   ## 
