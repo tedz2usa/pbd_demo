@@ -5,8 +5,6 @@ Demo project for Park Bench Digital new developer project.
 
 
 TODO:
------
-
 Add emailing features.
 Add pagination.
 Add user account administration. 
