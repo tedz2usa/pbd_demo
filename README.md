@@ -101,6 +101,7 @@ HTML, JavaScript
 
 * Allow Flash Notices to be dismissable by the user,
 	- The user may click on a close box to make the div element be removed from the page DOM.
+	- Adds to aesthetic appeal of the website achievable only through JavaScript.
 * Leverage JQuery JavaScript library.
 	- Ensure the consistent, reliable, and predictable execution of JavaScript code across all the most popular versions of web browsers, while ensuring productivity of programmer's time and energy.
 
