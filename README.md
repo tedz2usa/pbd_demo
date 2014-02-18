@@ -5,12 +5,16 @@ Demo project for Park Bench Digital new developer project.
 
 
 TODO:
+-----
+
 Add emailing features.
 Add pagination.
 Add user account administration. 
 
 
-Ruby on Rails ---------------------------------------------------------------------------
+Ruby on Rails
+-------------
+
 Utilizing routes file to control pointer for webiste root.
 Utilizing a database connection for persistent application information storage.
 Using Models 
@@ -43,7 +47,9 @@ Using custom route to allow action name to be displayed in url with an aesthetic
 	For example, '/account/change-password' instead of '/account/change_password'
 
 
-HTML, Forms -----------------------------------------------------------------------------
+HTML, Forms
+-----------
+
 Updating  Models with form submissions
 Using rails form helpers to generate forms in an object-aware manner.
 	When an object is provided, its attributes are automatically filled into the form fields.
@@ -57,7 +63,9 @@ Handling form error and outputting them to user.
 	The offending input field is also colored red.
 
 
-Security --------------------------------------------------------------------------------
+Security
+--------
+
 Implementing secure user authentication 
 	Using "has_secure_password" to store hashed password digests using bcrpt-ruby gem.
 	!!!##Using before_action callback to protect sensitive actions from performing without being logged in.
@@ -72,7 +80,9 @@ Preventing SQL injection
 	By always submitting database queries in a way such that Ruby on Rails handles user inputted data before insertion into an SQL query.
 
 
-HTML, CSS -------------------------------------------------------------------------------
+HTML, CSS
+---------
+
 Using the CSS box model styling attributes to add borders, colors, and spacing for aesthetic layout.
 Using the CSS positioning model for custom arrangemnts of items for interface layout.
 	Custom positioning of the Application title in the header bar.
@@ -88,10 +98,13 @@ Using CSS Hover pseudo-selector to add basic user interactivity without Javascri
 	For example, feed items get a light shade of blue when the mouse hovers over them.
 Using CSS Float to allow text to wrap around images in an aesthetic manner.
 
-HTML, JavaScript ------------------------------------------------------------------------
+HTML, JavaScript
+----------------
+
 Allow Flash Notices to be dismissable by the user,
 	The user may click on a close box to make the div element be removed from the page DOM.
 Leverage JQuery JavaScript library in order to ensure consistent, reliable, and predictable execution of JavaScript code across all the most popular versions of web browsers, while ensuring productivity of programmer's time and energy.
 
 
-Consumption of RESTful API --------------------------------------------------------------
+Consumption of RESTful API
+--------------------------
