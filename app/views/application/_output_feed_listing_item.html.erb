@@ -1,10 +1,10 @@
 
   <div class='listingItem'>
-    <% if item.thumbnail %>
+    <% if !item.thumbnail.blank? %>
       <% item.thumbnail = '/reddit-thumb.png' if item.thumbnail == 'self' %>
-      <a href='<%= item.link %>'><img src="<%= item.thumbnail %>"></a>
+      <a href='<%= item.link %>'><div class='listingItemThumb'><img src="<%= item.thumbnail %>"></div></a>
     <% end %>
-    <h1><a href='<%= item.link %>'><%= item.title %></a></h1>
-    <p class='littleNote'>Submitted <%= DateTime.strptime(item.created.to_s,'%s') %> by <%= item.author %></p>
+    <h1 class='<%= 'longTitle' if item.title.length > 100 %>'><a href='<%= item.link %>'><%= item.title %></a></h1>
+    <p class='littleNote'>Submitted <%= DateTime.strptime(item.created.to_s,'%s').strftime('%m/%d/%Y %I:%M%p') %> by <%= item.author %></p>
     <div class='clearBoth'></div>
   </div>

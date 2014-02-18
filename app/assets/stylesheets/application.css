@@ -60,6 +60,10 @@ a.headerBarTitle {
 	left:15px;
 }
 
+a.headerBarTitle:hover {
+	color: #fd5500;
+}
+
 .headerUserLogin {
 	position:absolute;
 	right:20px;
@@ -233,10 +237,15 @@ a.headerBarTitle {
 }
 
 
-.feedWrapper {
+.feedContainer {
 	margin-left: 150px;
-	width:700px;
 	border:0;
+	width:850px;
+	
+}
+
+.feedWrapper {
+	position: relative;
 }
 
 .border10 {

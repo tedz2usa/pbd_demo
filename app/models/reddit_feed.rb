@@ -1,5 +1,6 @@
 # require 'open-uri'
 require 'rest_client'
+require 'pp'
 
 class RedditFeed
 
@@ -15,6 +16,8 @@ class RedditFeed
     response = RestClient.get @feed_url
     raw_hash = JSON.parse(response.to_str)
     children = raw_hash['data']['children']
+
+    pp children
     
     children.each do |child|
       listingItem = ListingItem.new(child)

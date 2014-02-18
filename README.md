@@ -104,6 +104,8 @@ HTML, JavaScript
 	- Adds to aesthetic appeal of the website achievable only through JavaScript.
 * Leverage JQuery JavaScript library.
 	- Ensure the consistent, reliable, and predictable execution of JavaScript code across all the most popular versions of web browsers, while ensuring productivity of programmer's time and energy.
+* Reddit Feed Items positioned to fit snugly together using the versatility of JavaScript programming.
+	- Algorithm developed to assign a stack of feed items absolute position coordinates on the containing parent. Disperses items horizontally first, then vertically -- this positioning behavior is not possible with CSS.
 
 
 Consumption of RESTful API
