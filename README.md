@@ -1,5 +1,5 @@
-pbd_demo
-========
+Demo Project: Reddit Content Viewer
+===================================
 
 Demo project for Park Bench Digital new developer project.
 
