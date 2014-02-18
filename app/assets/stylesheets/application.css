@@ -213,6 +213,12 @@ strong {
 	font-size: 14px;
 }
 
+
+.feedWrapper {
+	margin-left: 150px;
+	width:700px;
+}
+
 .border10 {
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;

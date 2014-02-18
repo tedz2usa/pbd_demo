@@ -1,5 +1,7 @@
 PbdDemo::Application.routes.draw do
   
+  get "feed/all"
+  get "feed/listing"
   root :to => redirect('welcome')
   #root "main#index"
   match 'welcome' => 'main#index', :as => 'index', :via => :get
