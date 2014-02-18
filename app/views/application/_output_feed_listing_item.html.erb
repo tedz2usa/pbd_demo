@@ -1,4 +1,10 @@
 
   <div class='listingItem'>
-    <%= item.title %>
+    <% if item.thumbnail %>
+      <% item.thumbnail = '/reddit-thumb.png' if item.thumbnail == 'self' %>
+      <a href='<%= item.link %>'><img src="<%= item.thumbnail %>"></a>
+    <% end %>
+    <h1><a href='<%= item.link %>'><%= item.title %></a></h1>
+    <p class='littleNote'>Submitted <%= DateTime.strptime(item.created.to_s,'%s') %> by <%= item.author %></p>
+    <div class='clearBoth'></div>
   </div>

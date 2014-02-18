@@ -251,4 +251,6 @@ a.headerBarTitle {
 	border-radius: 5px;
 }
 
-
+.clearBoth {
+	clear:both;
+}

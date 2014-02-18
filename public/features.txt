@@ -76,5 +76,14 @@ Giving html elements multiple CSS classes to take advantage of refactored CSS st
 Using CSS Reset (http://meyerweb.com/eric/tools/css/reset/)
 	To reset all attribute values to zero or equivalent default, 
 	So that consistent layout style is displayed to all users across all browsers.
+Using CSS Hover pseudo-selector to add basic user interactivity without Javascript.
+	For example, feed items get a light shade of blue when the mouse hovers over them.
+Using CSS Float to allow text to wrap around images in an aesthetic manner.
+
+HTML, JavaScript ------------------------------------------------------------------------
+Allow Flash Notices to be dismissable by the user,
+	The user may click on a close box to make the div element be removed from the page DOM.
+Leverage JQuery JavaScript library in order to ensure consistent, reliable, and predictable execution of JavaScript code across all the most popular versions of web browsers, while ensuring productivity of programmer's time and energy.
+
 
 Consumption of RESTful API --------------------------------------------------------------
