@@ -56,7 +56,7 @@ function preparePage() {
   // Make Feed visible, and make it's height be that calculated.
   $('.feedWrapper').css({
     'visibility': 'visible',
-    'height': (smallestHeights[indexOfLargestValue(smallestHeights)] + 100  ) + 'px'
+    'height': (smallestHeights[indexOfLargestValue(smallestHeights)] /*+ 100 */ ) + 'px'
   });
 
   
@@ -78,7 +78,7 @@ function indexOfLargestValue(arr) {
   var largestValue = arr[0];
   var largestIndex = 0;
   for (var i=1, n=arr.length; i<n; i++) {
-    if (arr[i] > indexOfLargestValue) {
+    if (arr[i] > largestValue) {
       largestValue = arr[i];
       largestIndex = i;
     }

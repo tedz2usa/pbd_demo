@@ -6,6 +6,25 @@
       <%= display_listing_item(item) %>
     <% end %>
   </div>
-  
+  <br>
+  <br>
+  <br>
+  <div class='feedNavigation'>
+    <% if @has_previous %>
+      <%= link_to 'Previous', {:action => 'default', :controller => 'feed', :before => @has_previous, :count => @has_previous_count} %>
+    <% end %>
+    <% if @has_previous && @has_next %>
+      &nbsp;&nbsp;&middot;&nbsp;&nbsp;
+    <% end %>
+    <% if @has_next %>
+      <%= link_to 'Next', {:action => 'default', :controller => 'feed', :after => @has_next, :count => @has_next_count} %>
+    <% end %>
+  </div>
+  <br>
+  <br>
+  <br>
+
+
+
 </div>
 
