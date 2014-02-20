@@ -21,6 +21,18 @@ class ListingOwnershipController < ApplicationController
     end
   end
 
+  def delete
+    @listingOwnership = ListingOwnership.find(params[:id])
+  end
+
+  def destroy
+    @listingOwnership = ListingOwnership.find(params[:id])
+    @listingOwnership.destroy
+    flash[:noticeMessage] = "Listing subscription successfully removed."
+    flash[:noticeTone] = "positive"
+    redirect_to({:action => 'listing', :controller => 'feed'});
+  end
+
 
   private
 

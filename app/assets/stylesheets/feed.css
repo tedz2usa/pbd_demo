@@ -134,7 +134,7 @@ div.listingItem:hover {
 }
 
 .feedsListingInfoTable {
-	width:540px;
+	width:600px;
 }
 
 .flitTitle {
@@ -154,5 +154,9 @@ div.listingItem:hover {
 }
 
 .flitEditItem {
+	width:60px;
+}
+
+.flitRemoveItem {
 	width:60px;
 }

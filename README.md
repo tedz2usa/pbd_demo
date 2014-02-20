@@ -6,8 +6,10 @@ Demo project for Park Bench Digital new developer project.
 
 TODO:
 Add remove listing feature on manage view.
+Add default actions to be performed when user creates new account.
 Add emailing features.
 Add user account administration. 
+
 
 
 
@@ -71,7 +73,8 @@ Security
 
 Consumption of RESTful API
 --------------------------
-
+* Using 'rest_client' gem to perform get resquests of reddit listing endpoints.
+* Using a family of self-written Ruby classes to interpret JSON response format and provide useful methods to for navigation of reddit content listings.
 
 HTML, Forms
 -----------

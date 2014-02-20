@@ -35,35 +35,6 @@ class RedditFeed
   end
 
 
-  # # Nokogiri::XML(open("http://reddit.com/hot.xml"))
-  # attr_accessor :feed_url, :feed_items
-
-  # def initialize(url)
-  #     @feed_url = url
-  #     @feed_items = Array.new
-  # end
-
-  # def getListingItems(size)
-
-  #   # Get Listing Items
-  #   listing = Nokogiri::XML(open(@feed_url))
-  #   root = listing.children
-  #   channel = root.children
-  #   items = channel.children
-
-  #   # For each child, if the child has a node label of "item", 
-  #   items.each do |item|
-  #     if item.node_name == 'item'
-  #       # Add the listing item to the "@feed_items" array.
-  #       @feed_items << ListingItem.new(item)
-  #     end
-  #   end
-
-  # end
-
-
-
-
   
   
 end

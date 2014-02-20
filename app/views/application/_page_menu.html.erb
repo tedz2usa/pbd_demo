@@ -4,7 +4,14 @@
     <ul>
       <% menuItems.each do |item| %>
         <li>
-          <%= link_to item.display_name, {:action => item.link_action, :controller => item.link_controller} %>
+          <% if item.identifier_string = 'displayAllFeedListingSubscriptions' %>
+            <% listingOwnerships = ListingOwnership.where(:user_id => session[:user_id]) %>
+            <% listingOwnerships.each do |listing| %>
+              <%= link_to item.display_name, {:action => 'view', :id => listing.id, :controller => 'feed'} %>
+            <% end %>
+          <% else %>
+            <%= link_to item.display_name, {:action => item.link_action, :controller => item.link_controller} %>
+          <% end %>
         </li>
       <% end %>
     </ul>
