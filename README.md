@@ -5,9 +5,10 @@ Demo project for Park Bench Digital new developer project.
 
 
 TODO:
+Add remove listing feature on manage view.
 Add emailing features.
-Add pagination.
 Add user account administration. 
+
 
 
 Ruby on Rails
@@ -43,23 +44,14 @@ Ruby on Rails
 	- For example, to abstract the call to displaying form errors of an object.
 * Using custom route to allow action name to be displayed in url with an aesthetic hyphen rather than an underscore.
 	- For example, '/account/change-password' instead of '/account/change_password'
+	- And '/listing-subscription/:action/:id' instead of '/listing_ownership/:action:id'
 
-
-HTML, Forms
------------
-
-* Updating  Models with form submissions
-* Using rails form helpers to generate forms in an object-aware manner.
-	- When an object is provided, its attributes are automatically filled into the form fields.
-* Using form data validation to ensure data matches requirements before saving.
-	- Attribute data validation information stored on the Model layer of the application.
-* Handling form error and outputting them to user.
-	- When an error occurs during an attempt to save a Model object,
-	- The user is returned to the form again, 
-	- With a list of validation errors in the user's inputted data outputed,
-	- With the form prepopulated with the user's original data so that the user does not have to type them all again.
-	- The offending input field is also colored red.
-
+SQL Relational Database: PostgreSQL
+-----------------------------------
+* Utilize true database object relationships to organize information about the associations between the models of the application.
+	- One user is subscribed to many reddit feeds.
+	- One menu has many menu items.
+	- One menu item belongs to only one menu.
 
 Security
 --------
@@ -76,6 +68,37 @@ Security
 	- By default, which adds a security token to all HTML form submissions, so that Ruby knows that the data action request was submitted by the actual user on the actual form on the actual web application.
 * Preventing SQL injection
 	- By always submitting database queries in a way such that Ruby on Rails handles user inputted data before insertion into an SQL query.
+
+Consumption of RESTful API
+--------------------------
+
+
+HTML, Forms
+-----------
+
+* Updating Models with form submissions
+* Using rails form helpers to generate forms in an object-aware manner.
+	- When an object is provided, its attributes are automatically filled into the form fields.
+* Using form data validation to ensure data matches requirements before saving.
+	- Attribute data validation information stored on the Model layer of the application.
+* Handling form error and outputting them to user.
+	- When an error occurs during an attempt to save a Model object,
+	- The user is returned to the form again, 
+	- With a list of validation errors in the user's inputted data outputed,
+	- With the form prepopulated with the user's original data so that the user does not have to type them all again.
+	- The offending input field is also colored red.
+
+HTML, Tables
+------------
+
+* Displaying tabular data with HTML tables.
+* Precisely control appearance with CSS.
+	- Add spacing between rows for enhanced readibility.
+	- Control width of specific columns
+	- Using cascading of CSS rule selector specificity to organize table styling information in a hierarchical manner. 
+* Provide a suitable user interface for administration of large number objects.
+	- User may view current subscribed feeds.
+	- User may choose from the table listing to edit a specific feed item.
 
 
 HTML, CSS
@@ -107,6 +130,3 @@ HTML, JavaScript
 * Reddit Feed Items positioned to fit snugly together using the versatility of JavaScript programming.
 	- Algorithm developed to assign a stack of feed items absolute position coordinates on the containing parent. Disperses items horizontally first, then vertically -- this positioning behavior is not possible with CSS.
 
-
-Consumption of RESTful API
---------------------------

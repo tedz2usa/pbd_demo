@@ -1,4 +1,24 @@
 <% @page_menu = Menu.find_by_identifier_string('default') %>
 <div class='mainContentBox feedContainer'>
   <h1>Feeds Listing</h1>
+  <table class='infoTable feedsListingInfoTable'>
+    <col class='flitTitle'>
+    <col class='flitDisplayPerPage'>
+    <col class='flitVewAspect'>
+    <col class='flitEditItem'>
+    <tr>
+      <th>Title</th>
+      <th class='shrinkText'>Display Per Page</th>
+      <th class='shrinkText'>View Aspect</th>
+      <th class='shrinkText'>Edit Item</th>
+    </tr>
+    <% @listingOwnerships.each do |listing| %>
+      <tr>
+        <td><%= listing.title %></td>
+        <td class='itCentered'><%= listing.display_per_page %></td>
+        <td class='itCentered'><%= listing.view_aspect %></td>
+        <td class='itCentered'><%= link_to 'Edit', {:action => 'edit', :controller => 'listing_ownership', :id => listing.id} %></td>
+      </tr>
+    <% end %>
+  </table>
 </div>

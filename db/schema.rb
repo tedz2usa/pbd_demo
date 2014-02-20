@@ -11,10 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140218014054) do
+ActiveRecord::Schema.define(version: 20140220013131) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "listing_ownerships", force: true do |t|
+    t.integer  "user_id"
+    t.string   "title"
+    t.string   "listing_base_url"
+    t.integer  "display_per_page"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "view_aspect"
+  end
+
+  add_index "listing_ownerships", ["user_id"], name: "index_listing_ownerships_on_user_id", using: :btree
 
   create_table "menu_items", force: true do |t|
     t.string   "display_name"

@@ -1,7 +1,7 @@
 
   <div class='listingItem'>
     <% if !item.thumbnail.blank? %>
-      <% item.thumbnail = '/reddit-thumb.png' if item.thumbnail == 'self' %>
+      <% item.thumbnail = '/reddit-thumb.png' if item.thumbnail[0..3] != 'http' %>
       <a href='<%= item.link %>'><div class='listingItemThumb'><img src="<%= item.thumbnail %>"></div></a>
     <% end %>
     <h1 class='<%= 'longTitle' if item.title.length > 100 %>'><a href='<%= item.link %>'><%= item.title %></a></h1>

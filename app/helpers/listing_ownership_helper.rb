@@ -1,0 +1,2 @@
+module ListingOwnershipHelper
+end

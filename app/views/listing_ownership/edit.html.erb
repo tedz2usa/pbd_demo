@@ -1,0 +1,29 @@
+<div class='mainContentBox registerAccountBox accountSettingsBox'>
+  <h1>Edit Listing Subscription</h1>
+  <%= error_messages_for(@listingOwnership) %>
+  <%= form_for(:listingOwnership, :url => {:action => 'update', :id => @listingOwnership.id, :controller => 'ListingOwnership'}) do |f| %>
+    <table class='updateFormTable'>
+      <colgroup>
+        <col class='uftAttribute' />
+        <col class='uftValue' />
+      </colgroup>
+      <tr>
+        <td>Reddit Subreddit Title</td>
+        <td class='frozen'><%= @listingOwnership.title %></td>
+      </tr>
+      <tr>
+        <td>Display Per Page</td>
+        <td><%= f.text_field(:display_per_page) %></td>
+      </tr>
+      <tr>
+        <td>View Aspect</td>
+        <td><%= f.text_field(:view_aspect) %></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><%= submit_tag('Update Settings') %> <span style='font-size:12px;'>or <%= link_to 'Cancel', {:action => 'default', :controller => 'feed'} %>.</span></td>
+      </tr>
+    </table>
+  <% end %>
+
+</div>  

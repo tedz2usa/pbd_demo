@@ -248,6 +248,63 @@ a.headerBarTitle:hover {
 	position: relative;
 }
 
+.infoTable {
+	width:700px;
+	border-collapse:collapse;
+	table-layout: fixed;
+	font-size:16px;
+
+}
+
+.infoTable, .infoTable th, .infoTable td {
+	border:1px solid #555;
+}
+
+.infoTable th, .infoTable td {
+	height:25px;
+	vertical-align: middle;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.infoTable td {
+	padding-left: 10px;
+}
+
+.infoTable td.itCentered {
+	padding-left: 0px;
+	text-align: center;
+}
+
+.infoTable th {
+	font-weight: bold;
+}
+
+.infoTable .shrinkText {
+	font-size:14px;
+}
+
+.updateFormTable td {
+	padding-top:5px;
+	padding-bottom:5px;
+	line-height: 20px;
+}
+
+.updateFormTable td.frozen {
+	background-color: #eee;
+	color:#555;
+}
+
+/*.uftAttribute {*/
+.updateFormTable td:nth-child(1) {
+	padding-right: 10px;
+}
+
+.uftValue {
+
+}
+
+
 .border10 {
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
