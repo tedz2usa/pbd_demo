@@ -1,14 +1,18 @@
 <% if menu %>
   <div class='pageMenu'>
     <% menuItems = menu.menu_items %>
-    <ul>
+    <ul class='pmFirst'>
       <% menuItems.each do |item| %>
         <li>
           <% if item.identifier_string == 'displayAllFeedListingSubscriptions' %>
             <% listingOwnerships = ListingOwnership.where(:user_id => session[:user_id]) %>
+            <ul>
             <% listingOwnerships.each do |listing| %>
-              <%= link_to listing.title, {:action => 'view', :id => listing.id, :controller => 'feed'} %>
+              <li>
+                <%= link_to listing.title, {:action => 'view', :id => listing.id, :controller => 'feed'} %>
+              </li>
             <% end %>
+          </ul>
           <% else %>
             <%= link_to item.display_name, {:action => item.link_action, :controller => item.link_controller} %>
           <% end %>

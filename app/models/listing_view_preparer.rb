@@ -17,7 +17,7 @@ class ListingViewPreparer
 
 
     base_url = listingOwnership.listing_base_url
-    feed_request_url = base_url + '/' + listingOwnership.view_aspect + '.json' + request_params
+    feed_request_url = base_url + listingOwnership.view_aspect + '.json' + request_params
     puts feed_request_url
 
     reddit_feed = RedditFeed.new(feed_request_url)

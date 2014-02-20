@@ -3,14 +3,30 @@ require 'pp'
 
 class SubredditBrowser
 
-  def get
-    response = RestClient.get 'http://reddit.com/subreddits/popular.json?limit=10'
+  def self.get
+    response = RestClient.get 'http://reddit.com/subreddits/popular.json?limit=50'
     raw_hash = JSON.parse(response.to_str)
+    children = raw_hash['data']['children']
+    #pp children
+    subreddits = Array.new
 
-    pp raw_hash
+    children.each do |subreddit_hash|
+      subreddit = Subreddit.new(subreddit_hash)
+      subreddits << subreddit unless subreddit.nsfw
+    end
 
-    return nil
+    # subreddits.each do |subreddit|
+    #   puts subreddit.title_description
+    # end
 
+    return subreddits
+
+  end
+
+  def self.get_title(base_url)
+    response = RestClient.get base_url + 'about.json'
+    raw_hash = JSON.parse(response.to_str)
+    return raw_hash['data']['title']
   end
 
 

@@ -142,7 +142,7 @@ a.headerBarTitle:hover {
 	line-height: 20px;
 }
 
-.pageMenu ul {
+.pageMenu ul.pmFirst {
 	padding-left: 10px;
 	border-right:1px solid #555;
 }
@@ -253,6 +253,7 @@ a.headerBarTitle:hover {
 	border-collapse:collapse;
 	table-layout: fixed;
 	font-size:16px;
+	margin-bottom: 15px;
 
 }
 

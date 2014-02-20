@@ -1,7 +1,7 @@
 <div class='mainContentBox registerAccountBox accountSettingsBox'>
   <h1>Are you sure you want to remove this subscription?</h1>
   <%= error_messages_for(@listingOwnership) %>
-  <%= form_for(:listingOwnership, :url => {:action => 'update', :id => @listingOwnership.id, :controller => 'ListingOwnership'}) do |f| %>
+  <%= form_for(:listingOwnership, :url => {:action => 'destroy', :id => @listingOwnership.id, :controller => 'ListingOwnership'}) do |f| %>
     <table class='updateFormTable'>
       <colgroup>
         <col class='uftAttribute' />
