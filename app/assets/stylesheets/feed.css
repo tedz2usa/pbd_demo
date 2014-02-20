@@ -134,7 +134,7 @@ div.listingItem:hover {
 }
 
 .feedsListingInfoTable {
-	width:600px;
+	width:700px;
 }
 
 .flitTitle {
@@ -142,21 +142,21 @@ div.listingItem:hover {
 }
 
 .flitDisplayPerPage {
-	width:60px;
+	width:80px;
 }
 
 .flitDisplayPerPage {
-	width:60px;
+	width:80px;
 }
 
 .flitVewAspect {
-	width:60px;
+	width:80px;
 }
 
 .flitEditItem {
-	width:60px;
+	width:80px;
 }
 
 .flitRemoveItem {
-	width:60px;
+	width:80px;
 }
