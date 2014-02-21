@@ -48,12 +48,14 @@ Ruby on Rails
 	- And '/listing-subscription/:action/:id' instead of '/listing_ownership/:action:id'
 * Changing integer position values of one listing updates the position values of everything underneath, using the Ruby gem, 'acts_as_list'.
 
+
 SQL Relational Database: PostgreSQL
 -----------------------------------
 * Utilize true database object relationships to organize information about the associations between the models of the application.
 	- One user is subscribed to many reddit feeds.
 	- One menu has many menu items.
 	- One menu item belongs to only one menu.
+
 
 Security
 --------
@@ -71,11 +73,13 @@ Security
 * Preventing SQL injection
 	- By always submitting database queries in a way such that Ruby on Rails handles user inputted data before insertion into an SQL query.
 
+
 Consumption of RESTful API
 --------------------------
 * Using 'rest_client' gem to perform get resquests of reddit listing endpoints.
 * Using a family of self-written Ruby classes to interpret JSON response format and provide useful methods to for navigation of reddit content listings.
 	- Classes enable pagination to be easily incorporated into application code.
+
 
 HTML, Forms
 -----------
@@ -91,6 +95,7 @@ HTML, Forms
 	- With a list of validation errors in the user's inputted data outputed,
 	- With the form prepopulated with the user's original data so that the user does not have to type them all again.
 	- The offending input field is also colored red.
+
 
 HTML, Tables
 ------------
@@ -122,6 +127,7 @@ HTML, CSS
 * Using CSS Hover pseudo-selector to add basic user interactivity without Javascript.
 	- For example, feed items get a light shade of blue when the mouse hovers over them.
 * Using CSS Float to allow text to wrap around images in an aesthetic manner.
+
 
 HTML, JavaScript
 ----------------
