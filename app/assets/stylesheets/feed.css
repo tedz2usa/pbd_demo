@@ -134,7 +134,7 @@ div.listingItem:hover {
 }
 
 .feedsListingInfoTable {
-	width:750px;
+	width:850px;
 }
 
 .flitPos {
@@ -163,6 +163,10 @@ div.listingItem:hover {
 
 .flitRemoveItem {
 	width:80px;
+}
+
+.flitSetDefault {
+	width:100px;
 }
 
 .newListingBox {

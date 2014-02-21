@@ -46,6 +46,7 @@ Ruby on Rails
 * Using custom route to allow action name to be displayed in url with an aesthetic hyphen rather than an underscore.
 	- For example, '/account/change-password' instead of '/account/change_password'
 	- And '/listing-subscription/:action/:id' instead of '/listing_ownership/:action:id'
+* Changing integer position values of one listing updates the position values of everything underneath, using the Ruby gem, 'acts_as_list'.
 
 SQL Relational Database: PostgreSQL
 -----------------------------------
@@ -74,6 +75,7 @@ Consumption of RESTful API
 --------------------------
 * Using 'rest_client' gem to perform get resquests of reddit listing endpoints.
 * Using a family of self-written Ruby classes to interpret JSON response format and provide useful methods to for navigation of reddit content listings.
+	- Classes enable pagination to be easily incorporated into application code.
 
 HTML, Forms
 -----------

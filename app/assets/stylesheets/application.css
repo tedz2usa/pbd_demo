@@ -51,17 +51,19 @@ a:hover {
 
 a.headerBarTitle {
 	font-size: 30px;
+	line-height: 50px;
 	text-decoration: none;
 	color: #fa2222;
 	font-style: italic;
 	font-weight: bold;
-	position: relative;
-	top:10px;
-	left:15px;
+	padding-left: 15px;
+	display:block;
+	width:365px;
 }
 
 a.headerBarTitle:hover {
-	color: #fd5500;
+	background-color: #ddd;
+	border-right:1px solid #999;
 }
 
 .headerUserLogin {
@@ -273,6 +275,16 @@ a.headerBarTitle:hover {
 	padding-bottom: 10px;
 }
 
+.infoTable th {
+	font-weight: bold;
+	background-color: #cde;
+	color:#000;
+	font-size:13px;
+	padding: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
 .infoTable td {
 	padding-left: 10px;
 }
@@ -282,12 +294,14 @@ a.headerBarTitle:hover {
 	text-align: center;
 }
 
-.infoTable th {
-	font-weight: bold;
+.infoTable tr:hover {
+	background-color: #fafaff;
 }
 
+
+
 .infoTable .shrinkText {
-	font-size:14px;
+	font-size:13px;
 }
 
 .updateFormTable td {
