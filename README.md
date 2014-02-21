@@ -4,14 +4,6 @@ Demo Project: Reddit Content Viewer
 Demo project for Park Bench Digital new developer project.
 
 
-TODO:
-Add default actions to be performed when user creates new account.
-Add emailing features.
-Add user account administration. 
-
-
-
-
 Ruby on Rails
 -------------
 
@@ -62,7 +54,7 @@ Security
 
 * Implementing secure user authentication 
 	- Using "has_secure_password" to store hashed password digests using bcrpt-ruby gem.
-	- TODO: Using before_action callback to protect sensitive actions from performing without being logged in.
+	- Using before_action callback to protect sensitive actions from performing without being logged in. (todo)
 * Using Rails sessions to store persistent session data.
 	- Store user.id and user.username to remmember acrosse browser requests that the user is logged in.
 	- Sessions stored securely using default Ruby on Rails "CookieStore", which prevents tampering by the calculation of a digest.
@@ -140,3 +132,8 @@ HTML, JavaScript
 * Reddit Feed Items positioned to fit snugly together using the versatility of JavaScript programming.
 	- Algorithm developed to assign a stack of feed items absolute position coordinates on the containing parent. Disperses items horizontally first, then vertically -- this positioning behavior is not possible with CSS.
 
+
+
+TODO:
+Add emailing features.
+Add user account administration. 
