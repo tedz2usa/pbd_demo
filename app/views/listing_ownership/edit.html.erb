@@ -13,11 +13,11 @@
       </tr>
       <tr>
         <td>Display Per Page</td>
-        <td><%= f.text_field(:display_per_page) %></td>
+        <td><%= f.select(:display_per_page, 1..50) %></td>
       </tr>
       <tr>
         <td>View Aspect</td>
-        <td><%= f.text_field(:view_aspect) %></td>
+        <td><%= f.select(:view_aspect, ['hot', 'new', 'rising', 'top']) %></td>
       </tr>
       <tr>
         <td>&nbsp;</td>
