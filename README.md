@@ -134,6 +134,6 @@ HTML, JavaScript
 
 
 
-TODO:
+(todo:
 Add emailing features.
-Add user account administration. 
+Add user account administration.)
