@@ -1,7 +1,7 @@
 class ListingOwnershipController < ApplicationController
 
   def new
-    @listingOwnershipCount = ListingOwnership.count + 1
+    @listingOwnershipCount = ListingOwnership.ordered.find_all_by_user_id(session[:user_id]).count + 1
     @listingOwnership = ListingOwnership.new(:display_per_page => 25, :view_aspect => 'hot', :position => @listingOwnershipCount)
     subredditsAll = SubredditBrowser.get
     
@@ -28,7 +28,7 @@ class ListingOwnershipController < ApplicationController
   def create
     # Instantiate a new ListingOwnership using form parameters
     @listingOwnership = ListingOwnership.new(listing_ownership_params_new)
-    @listingOwnershipCount = ListingOwnership.count + 1
+    @listingOwnershipCount = ListingOwnership.ordered.find_all_by_user_id(session[:user_id]).count + 1
     puts @listingOwnership
     @listingOwnership.user_id = session[:user_id]
     @listingOwnership.title = SubredditBrowser.get_display_name(@listingOwnership.listing_base_url)
@@ -48,13 +48,13 @@ class ListingOwnershipController < ApplicationController
 
   def edit
     @listingOwnership = ListingOwnership.find_by_id(params[:id])
-    @listingOwnershipCount = ListingOwnership.count
+    @listingOwnershipCount = ListingOwnership.ordered.find_all_by_user_id(session[:user_id]).count
   end
 
   def update
     # Find an existing listingOwnership using request params.
     @listingOwnership = ListingOwnership.find(params[:id])
-    @listingOwnershipCount = ListingOwnership.count
+    @listingOwnershipCount = ListingOwnership.ordered.find_all_by_user_id(session[:user_id]).count + 1
     # Update object.
     if @listingOwnership.update_attributes(listing_ownership_params_update)
       # If the update succeeds, redirect to home with success message.

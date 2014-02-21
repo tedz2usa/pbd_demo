@@ -39,6 +39,7 @@ class UserController < ApplicationController
 
       @user.default_listing_ownership_id = l1.id
 
+      @user.save
 
 
 
