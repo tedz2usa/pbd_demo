@@ -54,7 +54,7 @@ Security
 
 * Implementing secure user authentication 
 	- Using "has_secure_password" to store hashed password digests using bcrpt-ruby gem.
-	- Using before_action callback to protect sensitive actions from performing without being logged in. (todo)
+	- Using before_action callback to protect sensitive actions from performing without being logged in (still todo).
 * Using Rails sessions to store persistent session data.
 	- Store user.id and user.username to remmember acrosse browser requests that the user is logged in.
 	- Sessions stored securely using default Ruby on Rails "CookieStore", which prevents tampering by the calculation of a digest.
