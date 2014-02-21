@@ -132,8 +132,3 @@ HTML, JavaScript
 * Reddit Feed Items positioned to fit snugly together using the versatility of JavaScript programming.
 	- Algorithm developed to assign a stack of feed items absolute position coordinates on the containing parent. Disperses items horizontally first, then vertically -- this positioning behavior is not possible with CSS.
 
-
-
-(todo:
-Add emailing features.
-Add user account administration.)
