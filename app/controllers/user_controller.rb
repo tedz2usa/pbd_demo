@@ -44,8 +44,12 @@ class UserController < ApplicationController
 
       session[:user_id] = @user.id
       session[:username] = @user.username
+      flash[:noticeMessage] = "Your account has been successfullly created."
+      flash[:noticeTone] = "positive"
       redirect_to(:action => 'index', :controller => 'main')
     else
+      flash[:noticeMessage] = "There was an issue with creating the user."
+      flash[:noticeTone] = "negative"
       # If the save fails, redisplay the form with fields filled in.
       render('account/register')
     end
@@ -55,10 +59,11 @@ class UserController < ApplicationController
     # Find an existing object using request params.
     @user = User.find(params[:id])
     # Update object.
-    if @user.update_attributes(user_params)
+    if @user.update_attributes(user_update_non_password_params)
       # If the update succeeds, redirect to home with success message.
       flash[:noticeMessage] = "Your account settings have been successfully saved."
       flash[:noticeTone] = "positive"
+      session[:username] = @user.username
       redirect_to(:action => 'index', :controller => 'main')
     else
       # If the update fails, redisplay the form with fields filled in.
@@ -100,6 +105,10 @@ class UserController < ApplicationController
     def user_params
       params.require(:user).permit(:first_name, :last_name, :email, :username, 
         :password, :password_confirmation)
+    end
+
+    def user_update_non_password_params
+      params.require(:user).permit(:first_name, :last_name, :email, :username)
     end
 
     def user_update_password_params

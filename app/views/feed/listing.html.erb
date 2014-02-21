@@ -25,7 +25,11 @@
         <td class='itCentered'><%= listing.display_per_page %></td>
         <td class='itCentered'><%= listing.view_aspect %></td>
         <td class='itCentered'><%= link_to 'Edit', {:action => 'edit', :controller => 'listing_ownership', :id => listing.id} %></td>
-        <td class='itCentered'><%= link_to 'Remove', {:action => 'delete', :controller => 'listing_ownership', :id => listing.id} %></td>
+        <% if listing.removable %>
+         <td class='itCentered'><%= link_to 'Remove', {:action => 'delete', :controller => 'listing_ownership', :id => listing.id} %></td>
+        <% else %>
+          <td class='itCentered'>Fixed</td>
+        <% end %>
         <% if User.find(session[:user_id]).default_listing_ownership_id == listing.id %>
           <td class='itCentered'>Default</td>
         <% else %>

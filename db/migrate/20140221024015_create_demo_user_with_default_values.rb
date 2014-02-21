@@ -1,6 +1,6 @@
 class CreateDemoUserWithDefaultValues < ActiveRecord::Migration
   def change
-    @user = User.create :first_name => 'Demo', :last_name => 'User', :email => 'demo@nowhere.com', :username => 'demo', :password => 'thisisapoorlychosenpassword', :password_confirmation => 'thisisapoorlychosenpassword'
+    @user = User.create :first_name => 'Demo', :last_name => 'User', :email => 'demo@nowhere.com', :username => 'demo', :password => 'badpassword', :password_confirmation => 'badpassword'
 
     # Create four new listing ownerships, and save a default one for the user.
     l1 = ListingOwnership.new(:display_per_page => 25, :view_aspect => 'hot', :user_id => @user.id)

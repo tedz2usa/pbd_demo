@@ -8,9 +8,13 @@ class User < ActiveRecord::Base
   validates_format_of :email, :with => /@/
   validates_presence_of :username
   validates_length_of :username, :minimum => 3
-  validates_presence_of :password
-  validates_length_of :password, :minimum => 6
-  validates_length_of :password, :maximum => 255
+  validates_presence_of :password, :if => :validate_password?
+  validates_length_of :password, :minimum => 6, :if => :validate_password?
+  validates_length_of :password, :maximum => 255, :if => :validate_password?
+
+  def validate_password?
+    password.present? || password_confirmation.present?
+  end
 
 
 
