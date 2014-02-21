@@ -1,7 +1,7 @@
 Demo Project: Reddit Content Viewer
 ===================================
 
-Demo project for Park Bench Digital new developer project. Live demo available here: http://tedzhu-pbd-demo.herokuapp.com
+Demo project for Park Bench Digital new developer project. <br />Live demo available here: http://tedzhu-pbd-demo.herokuapp.com
 
 
 Ruby on Rails
