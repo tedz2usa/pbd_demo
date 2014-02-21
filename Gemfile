@@ -54,6 +54,9 @@ gem "rest-client", "~> 1.6.7"
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.1.2'
 
+# For managing position values.
+gem "acts_as_list", "~> 0.3.0"
+
 # Use unicorn as the app server
 # gem 'unicorn'
 

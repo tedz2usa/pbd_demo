@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140220175419) do
+ActiveRecord::Schema.define(version: 20140221024015) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 20140220175419) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "view_aspect"
+    t.boolean  "removable",        default: true
+    t.integer  "position"
   end
 
   add_index "listing_ownerships", ["user_id"], name: "index_listing_ownerships_on_user_id", using: :btree

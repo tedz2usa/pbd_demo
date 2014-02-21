@@ -5,7 +5,6 @@ Demo project for Park Bench Digital new developer project.
 
 
 TODO:
-Add remove listing feature on manage view.
 Add default actions to be performed when user creates new account.
 Add emailing features.
 Add user account administration. 

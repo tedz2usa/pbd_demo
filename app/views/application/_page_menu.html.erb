@@ -5,12 +5,14 @@
       <% menuItems.each do |item| %>
         <li>
           <% if item.identifier_string == 'displayAllFeedListingSubscriptions' %>
-            <% listingOwnerships = ListingOwnership.where(:user_id => session[:user_id]) %>
+            <% listingOwnerships = ListingOwnership.where(:user_id => session[:user_id]).ordered %>
             <ul>
             <% listingOwnerships.each do |listing| %>
-              <li>
-                <%= link_to_unless_current listing.title, {:action => 'view', :id => listing.id, :controller => 'feed'} %>
-              </li>
+              <% if listing.removable  %>
+                <li>
+                  <%= link_to_unless_current listing.title, {:action => 'view', :id => listing.id, :controller => 'feed'} %>
+                </li>
+              <% end %>
             <% end %>
           </ul>
           <% else %>

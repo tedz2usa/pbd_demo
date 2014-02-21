@@ -1,16 +1,37 @@
 class ListingOwnershipController < ApplicationController
 
   def new
-    @listingOwnership = ListingOwnership.new(:display_per_page => 25, :view_aspect => 'hot')
-    @subreddits = SubredditBrowser.get
+    @listingOwnershipCount = ListingOwnership.count + 1
+    @listingOwnership = ListingOwnership.new(:display_per_page => 25, :view_aspect => 'hot', :position => @listingOwnershipCount)
+    subredditsAll = SubredditBrowser.get
+    
+
+    # Remove listings that the user has already subscribed to.
+    listingOwnerships = ListingOwnership.ordered.find_all_by_user_id(session[:user_id])
+    owned_urls = Array.new
+    listingOwnerships.each do |listing|
+      owned_urls << listing.listing_base_url
+    end
+    @subreddits = Array.new
+    subredditsAll.each do |subreddit|
+      cutoff_length = 70
+      if subreddit.title_description.length > cutoff_length
+        subreddit.title_description = subreddit.title_description[0..cutoff_length] + '...' 
+      end
+      if !(owned_urls.include? subreddit.base_url)
+        @subreddits << subreddit
+      end
+    end
+
   end
 
   def create
     # Instantiate a new ListingOwnership using form parameters
     @listingOwnership = ListingOwnership.new(listing_ownership_params_new)
+    @listingOwnershipCount = ListingOwnership.count + 1
     puts @listingOwnership
     @listingOwnership.user_id = session[:user_id]
-    @listingOwnership.title = SubredditBrowser.get_title(@listingOwnership.listing_base_url)
+    @listingOwnership.title = SubredditBrowser.get_display_name(@listingOwnership.listing_base_url)
     # Save object.
     if @listingOwnership.save
       # If the save succeeds, redirect to listings.
@@ -27,11 +48,13 @@ class ListingOwnershipController < ApplicationController
 
   def edit
     @listingOwnership = ListingOwnership.find_by_id(params[:id])
+    @listingOwnershipCount = ListingOwnership.count
   end
 
   def update
     # Find an existing listingOwnership using request params.
     @listingOwnership = ListingOwnership.find(params[:id])
+    @listingOwnershipCount = ListingOwnership.count
     # Update object.
     if @listingOwnership.update_attributes(listing_ownership_params_update)
       # If the update succeeds, redirect to home with success message.
@@ -78,11 +101,11 @@ class ListingOwnershipController < ApplicationController
   private
 
     def listing_ownership_params_update
-      params.require(:listingOwnership).permit(:display_per_page, :view_aspect)
+      params.require(:listingOwnership).permit(:display_per_page, :view_aspect, :position)
     end
 
     def listing_ownership_params_new
-      params.require(:listingOwnership).permit(:display_per_page, :view_aspect, :listing_base_url, :title)
+      params.require(:listingOwnership).permit(:display_per_page, :view_aspect, :listing_base_url, :title, :position)
     end
 
 

@@ -11,7 +11,7 @@ class Subreddit
     @base_url = 'http://reddit.com' + subreddit_hash['url']
     @description_text = subreddit_hash['description']
     @nsfw = subreddit_hash['over18']
-    @title_description = @display_name + ' ----- ' + @title + ''
+    @title_description = @display_name + ' -- ' + @title + ''
 
   end
 

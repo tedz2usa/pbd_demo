@@ -2,6 +2,7 @@
 <div class='mainContentBox feedContainer'>
   <h1>Feeds Listing</h1>
   <table class='infoTable feedsListingInfoTable'>
+    <col class='flitPos'>
     <col class='flitTitle'>
     <col class='flitDisplayPerPage'>
     <col class='flitVewAspect'>
@@ -9,6 +10,7 @@
     <col class='flitRemoveItem'>
     <col class='flitSetDefault'>
     <tr>
+      <th class='shrinkText'>Pos.</th>
       <th>Title</th>
       <th class='shrinkText'>Display Per Page</th>
       <th class='shrinkText'>View Aspect</th>
@@ -18,6 +20,7 @@
     </tr>
     <% @listingOwnerships.each do |listing| %>
       <tr>
+        <td class='itCentered'><%= listing.position %></td>
         <td><%= link_to listing.title, {:action => 'view', :controller => 'feed', :id => listing.id} %></td>
         <td class='itCentered'><%= listing.display_per_page %></td>
         <td class='itCentered'><%= listing.view_aspect %></td>
@@ -28,9 +31,9 @@
         <% else %>
           <td class='itCentered'><%= link_to 'Set Default', {:action => 'set_default', :controller => 'listing_ownership', :id => listing.id} %></td>
         <% end %>
-        
+
       </tr>
     <% end %>
   </table>
-  <%= link_to 'Add New Feed Subscription', {:action => 'new', :controller => 'listing_ownership'}, {:style => 'font-size:12px'} %>
+  <%= link_to 'Add Listing Subscription', {:action => 'new', :controller => 'listing_ownership'}, {:style => 'font-size:12px'} %>
 </div>

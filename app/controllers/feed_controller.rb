@@ -6,7 +6,7 @@ class FeedController < ApplicationController
   end
 
   def listing
-    @listingOwnerships = ListingOwnership.find_all_by_user_id(session[:user_id])
+    @listingOwnerships = ListingOwnership.ordered.find_all_by_user_id(session[:user_id])
   end
 
   def view

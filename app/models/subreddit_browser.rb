@@ -29,6 +29,12 @@ class SubredditBrowser
     return raw_hash['data']['title']
   end
 
+  def self.get_display_name(base_url)
+    response = RestClient.get base_url + 'about.json'
+    raw_hash = JSON.parse(response.to_str)
+    return raw_hash['data']['display_name']
+  end
+
 
 
 end

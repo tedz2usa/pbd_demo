@@ -12,6 +12,10 @@
         <td class='frozen'><%= @listingOwnership.title %></td>
       </tr>
       <tr>
+        <td>Position</td>
+        <td><%= f.select(:position, 1..@listingOwnershipCount) %></td>
+      </tr>
+      <tr>
         <td>Display Per Page</td>
         <td><%= f.select(:display_per_page, 1..50) %></td>
       </tr>

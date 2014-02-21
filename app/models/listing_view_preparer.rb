@@ -5,7 +5,7 @@ class ListingViewPreparer
     @after = req_params[:after]
     @count = req_params[:count]
     @before = req_params[:before]
-    @limit = req_params[:limit] || listingOwnership.display_per_page
+    @limit = req_params[:limit] || listingOwnership.display_per_page || 25
     
     after_param = 'after=' + @after.to_s if @after
     count_param = 'count=' + @count.to_s if @count

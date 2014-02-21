@@ -1,4 +1,4 @@
-<div class='mainContentBox registerAccountBox accountSettingsBox'>
+<div class='mainContentBox registerAccountBox newListingBox'>
   <h1>Create New Listing Subscription</h1>
   <%= error_messages_for(@listingOwnership) %>
   <%= form_for(:listingOwnership, :url => {:action => 'create', :controller => 'listing_ownership'}) do |f| %>
@@ -12,6 +12,10 @@
         <td><%= f.select(:listing_base_url, @subreddits.map {|subreddit| [subreddit.title_description, subreddit.base_url]}) %></td>
       </tr>
       <tr>
+        <td>Position</td>
+        <td><%= f.select(:position, 1..@listingOwnershipCount) %></td>
+      </tr>
+      <tr>
         <td>Display Per Page</td>
         <td><%= f.select(:display_per_page, 1..50) %></td>
       </tr>
@@ -21,7 +25,7 @@
       </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><%= submit_tag('Add') %> <span style='font-size:12px;'>or <%= link_to 'Cancel', {:action => 'default', :controller => 'feed'} %>.</span></td>
+        <td><%= submit_tag('Add') %> <span style='font-size:12px;'>or <%= link_to 'Cancel', {:action => 'listing', :controller => 'feed'} %>.</span></td>
       </tr>
     </table>
   <% end %>
