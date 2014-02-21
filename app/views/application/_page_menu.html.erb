@@ -9,12 +9,12 @@
             <ul>
             <% listingOwnerships.each do |listing| %>
               <li>
-                <%= link_to listing.title, {:action => 'view', :id => listing.id, :controller => 'feed'} %>
+                <%= link_to_unless_current listing.title, {:action => 'view', :id => listing.id, :controller => 'feed'} %>
               </li>
             <% end %>
           </ul>
           <% else %>
-            <%= link_to item.display_name, {:action => item.link_action, :controller => item.link_controller} %>
+            <%= link_to_unless_current item.display_name, {:action => item.link_action, :controller => item.link_controller} %>
           <% end %>
         </li>
       <% end %>

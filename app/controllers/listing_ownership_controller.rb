@@ -55,9 +55,25 @@ class ListingOwnershipController < ApplicationController
     @listingOwnership.destroy
     flash[:noticeMessage] = "Listing subscription successfully removed."
     flash[:noticeTone] = "positive"
-    redirect_to({:action => 'listing', :controller => 'feed'});
+    redirect_to({:action => 'listing', :controller => 'feed'})
   end
 
+
+  def set_default
+    user = User.find(session[:user_id])
+    #user.default_listing_ownership_id = params[:id]
+    if user.update_attribute(:default_listing_ownership_id, params[:id])
+      flash[:noticeMessage] = "Successfully updated default feed subscription."
+      flash[:noticeTone] = "positive"
+      redirect_to({:action => 'listing', :controller => 'feed'})
+    else
+      flash[:noticeMessage] = "Something went wrong."
+      flash[:noticeTone] = "negative"
+      puts user.errors.full_messages
+      redirect_to({:action => 'listing', :controller => 'feed'})
+
+    end
+  end
 
   private
 
