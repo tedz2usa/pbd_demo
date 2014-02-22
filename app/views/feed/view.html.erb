@@ -11,13 +11,13 @@
   <br>
   <div class='feedNavigation'>
     <% if @lvp.hasPrevious %>
-      <%= link_to 'Previous', {:action => 'default', :controller => 'feed'}.merge(@lvp.previousLinkParams) %>
+      <%= link_to 'Previous', {:action => 'view', :controller => 'feed', :id => params[:id]}.merge(@lvp.previousLinkParams) %>
     <% end %>
     <% if @lvp.hasPrevious && @lvp.hasNext %>
       &nbsp;&nbsp;&middot;&nbsp;&nbsp;
     <% end %>
     <% if @lvp.hasNext %>
-      <%= link_to 'Next', {:action => 'default', :controller => 'feed'}.merge(@lvp.nextLinkParams) %>
+      <%= link_to 'Next', {:action => 'view', :controller => 'feed', :id => params[:id]}.merge(@lvp.nextLinkParams) %>
     <% end %>
   </div>
   <br>
