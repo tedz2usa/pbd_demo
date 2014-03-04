@@ -47,7 +47,6 @@ describe ListingViewPreparer do
       lvp4.listingItems.size.should be <= 5
     end
   end
-
 end
 
 

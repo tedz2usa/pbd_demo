@@ -24,7 +24,6 @@ describe 'feed/default.html.erb' do
       render
       rendered.should have_selector('a', :content => 'Next')
     end
-
   end
 
 end
