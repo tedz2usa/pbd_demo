@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-PbdDemo::Application.load_tasks
+Trspec::Application.load_tasks

@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-PbdDemo::Application.config.secret_key_base = 'e43d7854db27f0a946a6900fd8598d4a1b83ce30ece60af0f093109de301c9a86fcbabfe33acd4361a9accd699d9bd6fb4ef1afe1270dc2862f25b24b7e1dbda'
+Trspec::Application.config.secret_key_base = 'd0ef3cf367e300a50fdc538550734aeeaed567f7f567e9cf1e146237ede35eb337beccef094a046b349682438147082d0807784a11ce573d78592632aedd7feb'

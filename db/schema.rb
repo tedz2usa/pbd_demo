@@ -13,9 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20140221024015) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "listing_ownerships", force: true do |t|
     t.integer  "user_id"
     t.string   "title"
@@ -28,7 +25,7 @@ ActiveRecord::Schema.define(version: 20140221024015) do
     t.integer  "position"
   end
 
-  add_index "listing_ownerships", ["user_id"], name: "index_listing_ownerships_on_user_id", using: :btree
+  add_index "listing_ownerships", ["user_id"], name: "index_listing_ownerships_on_user_id"
 
   create_table "menu_items", force: true do |t|
     t.string   "display_name"
@@ -42,7 +39,7 @@ ActiveRecord::Schema.define(version: 20140221024015) do
     t.integer  "menu_id"
   end
 
-  add_index "menu_items", ["identifier_string"], name: "index_menu_items_on_identifier_string", unique: true, using: :btree
+  add_index "menu_items", ["identifier_string"], name: "index_menu_items_on_identifier_string", unique: true
 
   create_table "menus", force: true do |t|
     t.string   "identifier_string"
@@ -50,7 +47,7 @@ ActiveRecord::Schema.define(version: 20140221024015) do
     t.datetime "updated_at"
   end
 
-  add_index "menus", ["identifier_string"], name: "index_menus_on_identifier_string", unique: true, using: :btree
+  add_index "menus", ["identifier_string"], name: "index_menus_on_identifier_string", unique: true
 
   create_table "users", force: true do |t|
     t.string   "first_name",                   limit: 25
@@ -63,6 +60,6 @@ ActiveRecord::Schema.define(version: 20140221024015) do
     t.integer  "default_listing_ownership_id"
   end
 
-  add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
+  add_index "users", ["username"], name: "index_users_on_username", unique: true
 
 end

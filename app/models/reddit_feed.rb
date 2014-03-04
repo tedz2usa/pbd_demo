@@ -21,9 +21,9 @@ class RedditFeed
     @listing_before = raw_hash['data']['before']
 
 
-    pp raw_hash
-    puts '@listing_after = ' + @listing_after.to_s
-    puts '@listing_before = ' + @listing_before.to_s
+    #pp raw_hash
+    #puts '@listing_after = ' + @listing_after.to_s
+    #puts '@listing_before = ' + @listing_before.to_s
 
 
     children.each do |child|

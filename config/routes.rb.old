@@ -1,24 +1,4 @@
 Trspec::Application.routes.draw do
-  
-  root :to => redirect('welcome')
-  #root "main#index"
-  match 'welcome' => 'main#index', :as => 'index', :via => :get
-  match 'account/change-password' => 'account#change_password', :as => 'change_password', :via => [:get, :post]
-  match 'listing-subscription/(/:action(/:id))' => 'listing_ownership', :via => [:get, :post]
-  match ':controller/(/:action(/:id))', :via => [:get, :post]
-  
-  
-
- #get "main/index"
- #get "main/hello"
-
-
-
-
-  #get "main/hello/:id"
-
-  
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
