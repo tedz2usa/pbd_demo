@@ -1,0 +1,43 @@
+<% @page_menu = Menu.find_by_identifier_string('default') %>
+<div class='mainContentBox feedContainer'>
+  <h1>Feeds Listing</h1>
+  <table class='infoTable feedsListingInfoTable'>
+    <col class='flitPos'>
+    <col class='flitTitle'>
+    <col class='flitDisplayPerPage'>
+    <col class='flitVewAspect'>
+    <col class='flitEditItem'>
+    <col class='flitRemoveItem'>
+    <col class='flitSetDefault'>
+    <tr>
+      <th class='shrinkText'>Pos.</th>
+      <th>Title</th>
+      <th class='shrinkText'>Display Per Page</th>
+      <th class='shrinkText'>View Aspect</th>
+      <th class='shrinkText'>Edit Item</th>
+      <th class='shrinkText'>Remove Item</th>
+      <th class='shrinkText'>Set Default</th>
+    </tr>
+    <% @listingOwnerships.each do |listing| %>
+      <tr>
+        <td class='itCentered'><%= listing.position %></td>
+        <td><%= link_to listing.title, {:action => 'view', :controller => 'feed', :id => listing.id} %></td>
+        <td class='itCentered'><%= listing.display_per_page %></td>
+        <td class='itCentered'><%= listing.view_aspect %></td>
+        <td class='itCentered'><%= link_to 'Edit', {:action => 'edit', :controller => 'listing_ownership', :id => listing.id} %></td>
+        <% if listing.removable %>
+         <td class='itCentered'><%= link_to 'Remove', {:action => 'delete', :controller => 'listing_ownership', :id => listing.id} %></td>
+        <% else %>
+          <td class='itCentered'>Fixed</td>
+        <% end %>
+        <% if User.find(session[:user_id]).default_listing_ownership_id == listing.id %>
+          <td class='itCentered'>Default</td>
+        <% else %>
+          <td class='itCentered'><%= link_to 'Set Default', {:action => 'set_default', :controller => 'listing_ownership', :id => listing.id} %></td>
+        <% end %>
+
+      </tr>
+    <% end %>
+  </table>
+  <%= link_to 'Add Listing Subscription', {:action => 'new', :controller => 'listing_ownership'}, {:style => 'font-size:12px'} %>
+</div>

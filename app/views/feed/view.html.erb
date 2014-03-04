@@ -1,0 +1,30 @@
+<% @page_menu = Menu.find_by_identifier_string('default') %>
+<div class='mainContentBox feedContainer'>
+  <h1>Feed: <%= @lvp.title %></h1>
+  <div class='feedWrapper'>
+    <% @lvp.listingItems.each do |item| %>
+      <%= display_listing_item(item) %>
+    <% end %>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div class='feedNavigation'>
+    <% if @lvp.hasPrevious %>
+      <%= link_to 'Previous', {:action => 'view', :controller => 'feed', :id => params[:id]}.merge(@lvp.previousLinkParams) %>
+    <% end %>
+    <% if @lvp.hasPrevious && @lvp.hasNext %>
+      &nbsp;&nbsp;&middot;&nbsp;&nbsp;
+    <% end %>
+    <% if @lvp.hasNext %>
+      <%= link_to 'Next', {:action => 'view', :controller => 'feed', :id => params[:id]}.merge(@lvp.nextLinkParams) %>
+    <% end %>
+  </div>
+  <br>
+  <br>
+  <br>
+
+
+
+</div>
+

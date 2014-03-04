@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PBD Demo</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div class='headerBar'>
+		<%= link_to "Reddit Content Viewer", @headerTitleLinkTarget, {:class => "headerBarTitle"} %>
+		<div class='headerUserLogin'>
+			<% if session[:user_id] %>
+        <%= link_to session[:username], {:action => 'settings', :controller => 'account'}, {:class => 'userLoginUsername'} %>&nbsp;&nbsp;
+        <%= link_to 'Logout', {:action => 'logout', :controller => 'account'} %>
+      <% else %>
+        <%= link_to 'Register', {:action => 'register', :controller => 'account'} %>&nbsp;&nbsp;
+        <%= link_to 'Login', {:action => 'login', :controller => 'account'} %>
+      <% end %>
+		</div>
+	</div>
+  <% if flash[:noticeMessage] %>
+    <div class='flashNotice border5<%= @noticeToneClass %>' id='flashNotice'>
+      <%= flash[:noticeMessage] %>
+      <div class='fnClose border10' id='flashNoticeClose'>×</div>
+    </div>
+  <% end %>
+  <%= display_page_menu(@page_menu) if session[:user_id] && @page_menu %>
+  <div class='allWrapper'>
+    
+  	<%= yield %>
+  </div>
+
+</body>
+</html>

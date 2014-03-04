@@ -1,0 +1,20 @@
+
+  <div class='listingItem'>
+    <% if !item.thumbnail.blank? %>
+      <% item.thumbnail = '/reddit-thumb.png' if item.thumbnail[0..3] != 'http' %>
+      <a href='<%= item.link %>' target='_blank'><div class='listingItemThumb'><img src="<%= item.thumbnail %>"></div></a>
+    <% end %>
+    <h1 class='<%= 'longTitle' if item.title.length > 100 %>'><a href='<%= item.link %>' target='_blank'><%= item.title %></a></h1>
+    <p class='submissionLine'><%= DateTime.strptime(item.created.to_s,'%s').strftime('%b %d, %Y %I:%M%P') %> by <%= link_to item.author, 'http://www.reddit.com/user/' + item.author %></p>
+    <div class='clearBoth'></div>
+    <div class='listingBottom'>
+      <a class='listingScore' href="http://www.reddit.com<%= item.permaLink %>" target='_blank'>
+        <%= item.score %>
+        <div class='listingScoreArrow'></div>
+      </a>
+      <a class='listingNumComments' href="http://www.reddit.com<%= item.permaLink %>" target='_blank'>
+        <div class='listingNumCommentsValue'><%= item.numComments %></div>
+        <div class='listingNumCommentsUnit'>comments</div>
+      </a>
+    </div>
+  </div>
