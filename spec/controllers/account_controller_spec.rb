@@ -74,12 +74,10 @@ describe AccountController do
       it 'redirects back to login page' do
         post :attempt_login, :username => 'demo', :password => ''
         response.should redirect_to(:action => 'login')
-      end
-    
+      end    
     end
     
   end
-
 
 end
 
